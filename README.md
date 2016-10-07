@@ -9,4 +9,4 @@ letsencrypt dir.  Do the thing like this:
         -p 443:443 \
         -e SERVER_NAME=$SERVER_NAME \
         -v /etc/letsencrypt:/letsencrypt \
-        sitch
+        sitch/web
