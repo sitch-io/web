@@ -3,10 +3,11 @@
 
 You just need to start it with 443 exposed and the SERVER_NAME env var set.
 SERVER_NAME is the FQDN of your certificate.  Also, you'll need to mount up your
-letsencrypt dir.  Do the thing like this:
+letsencrypt dir.  And the content you're serving.  Do the thing like this:
 
         docker run -d \
         -p 443:443 \
         -e SERVER_NAME=$SERVER_NAME \
         -v /etc/letsencrypt:/letsencrypt \
+        -v /var/www/:/usr/share/nginx/html/
         sitch/web
