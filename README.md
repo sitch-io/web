@@ -13,5 +13,5 @@ Also, you'll need to mount up your letsencrypt dir.  And the content you're serv
         -e KIBANA_URL=$KIBANA_URL \
         -e CHRONOGRAF_URL=$CHRONOGRAF_URL \
         -v /etc/letsencrypt:/letsencrypt \
-        -v /opt/share/www/:/usr/share/nginx/html/ \
-        sitch/web
+        -v /opt/shared/feed/production/:/usr/share/nginx/html/ \
+        docker.io/sitch/web
